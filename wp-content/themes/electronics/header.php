@@ -1,6 +1,6 @@
 <body>
 	<header>
-	HEADER HEADER
+	HEADER
 <?php
 wp_nav_menu('header_menu');
 // echo get_stylesheet_directory_uri();
