@@ -7,8 +7,6 @@ Class Theme_electronics{
 	function index(){
 		add_theme_support('post-thumbnails');
 		register_nav_menus($this->menus_array);
-
-		
 	}
 	function ajax_products_filter(){
 		add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
