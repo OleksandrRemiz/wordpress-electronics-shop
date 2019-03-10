@@ -7,16 +7,16 @@ Class Theme_electronics{
 	function index(){
 		add_theme_support('post-thumbnails');
 		register_nav_menus($this->menus_array);
-	}
-	function ajax_products_filter(){
-		add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
-		function theme_name_scripts() {
+
+		add_action( 'wp_enqueue_scripts', 'electronics_scripts' );
+		function electronics_scripts() {
 			// wp_enqueue_style( 'main-style-css', get_template_directory_uri() . "/style.css" );
 		
 			wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js' );
 			wp_enqueue_script( 'main-script-name', get_template_directory_uri() . '/js/script.js' );
 		}
-		
+	}
+	function ajax_products_filter(){
 		add_action( 'wp_ajax_ajax_electronics_filter', 'ajax_electronics_filter_function' );
 		add_action( 'wp_ajax_nopriv_ajax_electronics_filter', 'ajax_electronics_filter_function' );
 		function ajax_electronics_filter_function(){
